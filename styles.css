@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Turret+Road:wght@700&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Turret Road',cursive;   
+    background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header{
+    padding: 30px;
+    background: #283c86;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #45a247, #283c86);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #45a247, #283c86); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background: url('https://images.unsplash.com/photo-1591365437381-2db81d59f1e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
+height: 90vh;
+width: 100vw;
+border: none;
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+position: relative;
+clip-path: polygon(2% 11%, 3% 7%,96% 16%, 96% 27%, 91% 79%, 10% 93%, 8% 89%);
+
+}
+
+.container{
+    position: absolute;
+    color: white;
+    font-size: 22px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.container h1{
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+    text-align: center;
+
+}
+
+form{
+    position: relative;
+     display: flex;
+     width: 500px;
+}
+
+input{
+    width: 100%;
+    max-width: 100%;
+    height: 45px;
+    padding: 15px 30px;
+    border-radius:50px;
+    border: none;
+    outline: none;
+}
+
+button{
+    width: 100px;
+    max-width: 100%;
+    background:#7d07a1;
+    color: white;
+    border-radius:50px;
+    border: none;
+    position: absolute;
+    right:2px;
+    bottom: 2px;
+    top:2px;
+    font-weight: 600;
+    outline: none;
+
+}
+
+button:hover{
+    background:#ac08df ;
+    transform: scale(0.96);
+}
+.result{
+    color:white;
+    text-align: center;
+    font-family: 'Roboto Condensed' ,sans-serif;
+    margin-top: 20px;
+    position: relative;
+}
+
+.song-list{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left:50%;
+    transition: translate(-50%,0);
+}
+
+.song-list li{
+    position: relative;
+    margin-bottom: 20px;
+    width: 500px;
+    justify-content: space-evenly;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 18px;
+    text-decoration: overline;
+}
+.song-list li::after{
+    content: "";
+    position: absolute;
+    right: -20px;
+    left: -20px;
+    bottom: -4px;
+    height: 3px;
+    background: rgb(12,100,147);
+    display: inline-block;
+
+}
+
+.song-list li div{
+    float: left;
+     
+}
+
+.song-list li span{
+    float: right;
+    background-color: #283c86;
+    border: none;
+    font-size: 12px;
+    border-radius: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 5px 10px;
+    text-transform: capitalize;
+}
+ 
+/*For mobile devices*/
+
+@media(max-width:450px){
+
+    header{
+        height: 60vh;
+        width: 90%vw;
+
+    }
+
+    .container{
+        font-size: 18px;
+
+    }
+
+    form{
+        max-width: 260px;
+    }
+    input{
+        width: 100%;
+        height: 30px;
+        padding: 10px 18px;
+    }
+
+    button{
+        width: 60px;
+        max-width: 100%;
+}
+
+.song-list{
+    width: 0%;
+    text-align: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.song-list li{
+    margin-bottom: 15px;
+    max-width: 300px;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    
+}
+
+
+} 
+@media only screen and (max-width:800px) {
+    header{
+        height: 70vh;
+        width: 95%vw;
+    }
+    .container{
+        font-size: 20px;
+        
+    }
+    form{
+        max-width: 300px;
+    }
+    input{
+        width: 100%;
+        height: 40px;
+        padding: 12px 20px;
+  
+    }
+    button{
+        width: 80px;
+        max-width: 100%;
+    }
+    .song-list li{
+        margin-bottom: 15px;
+        max-width: 300px;
+        letter-spacing: 0.5px;
+        font-size: 13px;
+        
+    }
+   
+    
+}
